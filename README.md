@@ -10,6 +10,13 @@ Raspberry Pi and transmits to a cloud database via MQTT, displaying results on
 an insurance web dashboard.
 
 ## System Architecture
+Sensors (GPS + MPU6050 + LM393) → Raspberry Pi 4
+↓ (MQTT)
+MongoDB Atlas (AWS N. Virginia)
+↓ (REST API)
+Node.js Web Application Server
+↓
+Insurance Dashboard (Driver metrics + Accident alerts)
 ## Hardware Components
 - **Controller:** Raspberry Pi 4 Model B
 - **GPS:** Neo-6MV (UART serial communication)
